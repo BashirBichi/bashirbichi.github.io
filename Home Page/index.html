@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en" manifest="demo.appcache">
+<!--divinectorweb.com-->
+<head>
+    <meta charset="UTF-8">
+    <title>Bashir Bichi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="leftMenu">
+        <a href="javscript:void(0)" class="btn-area" onclick="closeBtn()">×</a>
+        <div class="mainNav">
+            <a href="#">home</a>
+            <a href="#about">about</a>
+            <a href="#portfolio">portfolio</a>
+            <a href="#services">services</a>
+            <a href="#blog">blog</a>
+            <a href="#contact">contact</a>
+        </div>
+    </div>
+    <span onclick="openBtn()">☰ Menu</span>
+    
+    <div class="content" alt="">
+        <div class="box">
+            <h2> </h2>
+        <p></p>
+        </div>
+    </div>
+    <div class="about" id="about">
+        <div class="box">
+            <h2>About Me</h2>
+            <!-- <p> 
+				I am a passionate and innovative designer with a keen eye for detail.
+				- "As an experienced developer, I strive to deliver results and solve complex problems."
+				- "I am a collaborative and adaptable marketer who thrives in a fast-paced environment."</p> -->
+			<p>As a web developer, I possess a strong skill set in front-end and back-end development, 
+			crafting intuitive user interfaces and building robust web applications. With several years of experience in the field,
+		    I have successfully delivered projects, collaborated with cross-functional teams, and implemented cutting-edge technologies to enhance user experiences.
+		    Beyond web development, I am also an SEO specialist, optimizing websites for improved visibility and organic traffic. Additionally, I have a deep passion for fictional writing, where I indulge in storytelling and create immersive worlds through the written word. 
+			These diverse interests and expertise allow me to bring a unique perspective and creative flair to my work.</p>
+        </div>
+    </div>
+	<br>
+    <div class="portfolio" id="portfolio">
+        <div class="box">
+            <h2>Portfolio</h2>
+            <p>Explore my portfolio to see a collection of my previous projects and successes."
+				- "Check out examples of my work to get a sense of my creative approach and expertise."
+				- "Browse through my showcase of client projects to see the diverse range of assignments I have worked on."
+			 </p>
+        </div>
+    </div>
+	<br>
+    <div class="services" id="services">
+        <div class="box">
+            <h2>My Services</h2>
+            <p></p>
+        </div>
+    </div>
+	<br>
+    <div class="blog" id="blog">
+        <div class="box">
+            <h2>My Blog</h2>
+            <p>Read my latest insights and thoughts on industry trends and developments."
+				- "Discover practical tips and tutorials to enhance your skills in my blog."
+				- "Stay informed with the latest news and updates through my blog posts.</p>
+        </div>
+    </div>
+	<br>
+    <div class="contact" id="contact">
+        <div class="box">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out to me by filling out the contact form below."
+				- "Connect with me on social media to stay updated on my latest endeavors."
+				- "If you have any inquiries or would like to schedule a call, please don't hesitate to send me an email</p>
+				<div class="contact-container">
+					<p>Feel free to reach out to me by filling out the contact form below.</p>
+					<form id="contact-form">
+					  <label for="name">Name:</label>
+					  <input type="text" id="name" name="name" required>
+					  <label for="email">Email:</label>
+					  <input type="email" id="email" name="email" required>
+					  <label for="message">Message:</label>
+					  <textarea id="message" name="message" required></textarea>
+					  <button type="submit">Send</button>
+					</form>
+					<div id="social-media-icons">
+					  <a href="https://example.com/facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+					  <a href="https://example.com/twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+					  <a href="https://example.com/instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+					  <a href="https://wa.me/+2349035009031" target="_blank"><i class="fab fa-whatsapp"></i></a>
+					  <a href="bashirbichi20@gmail.com"><i class="fas fa-envelope"></i></a>
+					</div>
+				</div>
+        </div>
+    </div>
+	<br>
+	
+	<style>
+	
+	* {margin: 0;
+	padding: 0;
+}
+body {
+	font-family: impact;
+	background-color: #000;
+	width: 100%;
+}
+html {
+	scroll-behavior: smooth;
+}
+#leftMenu {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: deepskyblue;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+	z-index: 1000;
+}
+.mainNav {
+	margin-top: 70px;
+}
+.mainNav a {
+	margin-bottom: 15px;
+}
+.content, .about, .portfolio, .services, .blog, .contact {
+	display: grid;
+	place-items: center;
+	height: 80vh;
+	/* padding: 5%; */
+	margin: 5%;
+}
+.content h2, .about h2, .portfolio h2, .services h2, .blog h2, .contact h2 {
+	font-family: russo one;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 50px;
+	color: deepskyblue;
+}
+.content p, .about p, .portfolio p, .services p, .blog p, .contact p {
+	font-family: montserrat;
+	width: 65%;
+	line-height: 1.9;
+	text-align: center;
+    margin: auto;
+	color: rgb(255, 255, 255);
+	font-size: larger;
+}
+.content {
+	display: grid;
+	place-items: center;
+	height: 100vh;
+	/* background: url(images/img3.jpeg); */
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	z-index: 1;
+	height: 100px;
+}
+.content:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: -1;
+}
+.content p {
+	color: white;
+}
+#leftMenu a {
+	padding: 8px 8px 8px 10px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #fff;
+	display: block;
+	transition: 0.4s;
+	text-align: center;
+	text-transform: uppercase;
+	border-radius: 0 50PX 50px 0;
+}
+#leftMenu a:hover {
+	color: #000;
+	background: #fff;
+}
+#leftMenu a.btn-area {
+	border-radius: 0;
+}
+#leftMenu .btn-area {
+	position: absolute;
+	top: 0;
+	right: 15px;
+	font-size: 40px;
+}
+/* Style the navigation menu container */
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Style the individual menu items */
+.nav-menu li {
+  list-style: none;
+  margin-right: 20px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Add hover effect to menu items */
+.nav-menu a:hover {
+  color: #ff0000;
+}
+
+/* Add animation to menu items */
+.nav-menu a {
+  transition: color 0.3s ease-out;
+}
+/* Default styles for larger screens */
+.nav-menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-menu li {
+  margin: 0 10px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+  
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .nav-menu li {
+    margin: 5px 0;
+  }
+  
+  #menu-toggle:checked ~ .nav-menu {
+    display: block;
+  }
+}
+span {
+	position: fixed;
+	right: 90px;
+	top: 30px;
+	font-size: 30px;
+	transition: 0.3s;
+	cursor: pointer;
+	z-index: 5;
+	color: deepskyblue;
+}
+#contact-form {
+  display: grid;
+  gap: 10px;
+  color: deepskyblue;
+}
+
+#contact-form label,
+#contact-form input,
+#contact-form textarea,
+#contact-form button {
+  width: 100%;
+}
+
+#social-media-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#social-media-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 24px;
+}
+
+#social-media-icons a i {
+  color: #333;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Add Font Awesome's CDN link in your HTML file to use the icons */
+/* @media (max-width:767px) {
+	span {
+		right: 15px;
+		top: 20px;
+		font-size: 20px;
+	}
+	.content h2, .about h2, .portfolio h2, .services h2, .blog h2, .contact h2 {
+		font-size: 35px;
+	}
+	.mainNav {
+		margin-top: 20px;
+	}
+} */
+.active {
+  font-weight: bold;
+  color: #ff0000; /* Customize the active state color */
+}
+
+footer{
+	color: deepskyblue;
+}
+
+	</style>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        function openBtn()
+        {
+            document.getElementById("leftMenu").style.width = "15%";
+        }
+
+        function closeBtn()
+        {
+            document.getElementById("leftMenu").style.width = "0";
+        }
+
+
+
+		// Add smooth scrolling to menu links
+$(document).ready(function() {
+  $('.nav-menu a').on('click', function(e) {
+    if (this.hash !== '') {
+      e.preventDefault();
+
+      const hash = this.hash;
+      
+      // Smooth scroll animation
+      $('html, body').animate(
+        {
+          scrollTop: $(hash).offset().top
+        },
+        800 // Animation duration in milliseconds
+      );
+    }
+  });
+});
+
+
+
+// Add active state to menu item on scroll
+$(window).scroll(function() {
+  const scrollPosition = $(this).scrollTop();
+  
+  $('.nav-menu a').each(function() {
+    const currentLink = $(this);
+    const section = $(currentLink.attr('href'));
+    
+    if (section.position().top <= scrollPosition && section.position().top + section ().height() > scrollPosition) {
+      $('.nav-menu a').removeClass('active');
+      currentLink.addClass('active');
+    } else {
+      currentLink.removeClass('active');
+    }
+  });
+});
+    </script>
+	<!-- <footer>
+		<p>&copy; 2022 My Website. All rights reserved.</p>
+	</footer> -->
+</body>
+
+</html>
